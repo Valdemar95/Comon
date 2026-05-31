@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свидание</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="step active" id="step1">
+            <div class="content glass">
+                <h1 class="main-title">Кристина💖 пойдёшь со мной на свидание?</h1>
+                <div class="buttons-container">
+                    <button class="btn btn-primary" id="yesBtn">Даа 💖</button>
+                    <button class="btn btn-secondary" id="maybeBtn">Пока не знаю👉👈</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" id="step2">
+            <div class="content glass">
+                <h2 class="section-title">Что ты хочешь поесть?</h2>
+                <div class="cuisine-grid">
+                    <div class="cuisine-card" data-cuisine="Итальянская 🍝">Итальянская 🍝</div>
+                    <div class="cuisine-card" data-cuisine="Японская 🍣">Японская 🍣</div>
+                    <div class="cuisine-card" data-cuisine="Грузинская 🫓">Грузинская 🫓</div>
+                    <div class="cuisine-card" data-cuisine="Корейская 🇰🇷">Корейская 🇰🇷</div>
+                    <div class="cuisine-card" data-cuisine="Фастфуд 🍔">Фастфуд 🍔</div>
+                    <div class="cuisine-card" data-cuisine="Вегетарианская 🥗">Вегетарианская 🥗</div>
+                </div>
+                <button class="btn btn-primary" id="nextStep2" style="display: none;">Далее →</button>
+            </div>
+        </div>
+
+        <div class="step" id="step3">
+            <div class="content glass">
+                <h2 class="section-title">Когда тебе удобно?</h2>
+                <div class="datetime-container">
+                    <div class="input-group">
+                        <label for="datePicker">Дата</label>
+                        <input type="date" id="datePicker" class="input-field">
+                    </div>
+                    <div class="input-group">
+                        <label for="timePicker">Время</label>
+                        <input type="time" id="timePicker" class="input-field">
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="nextStep3">Далее →</button>
+            </div>
+        </div>
+
+        <div class="step" id="step4">
+            <div class="content glass">
+                <h2 class="section-title">Я заеду за тобой 💕</h2>
+                <div class="input-group">
+                    <label for="addressInput">Адрес</label>
+                    <input type="text" id="addressInput" class="input-field" placeholder="Введи свой адрес">
+                </div>
+                <button class="btn btn-primary" id="nextStep4">Далее →</button>
+            </div>
+        </div>
+
+        <div class="step" id="step5">
+            <div class="content glass modal">
+                <h2 class="section-title">Проверим всё ещё раз 💌</h2>
+                <div class="summary" id="summary"></div>
+                <button class="btn btn-primary" id="confirmBtn">Подтвердить</button>
+            </div>
+        </div>
+
+        <!-- Confirmation Popup -->
+        <div class="confirmation-popup" id="confirmationPopup">
+            <div class="popup-content glass">
+                <h2 class="section-title">Отлично! ✨</h2>
+                <p style="color: #ffb6c1; text-align: center; margin-bottom: 25px; font-size: 1.1rem;">Я очень рад что ты согласилась, готовимся к свиданию! 😘💖</p>
+                <button class="btn btn-primary" id="popupContinueBtn">Продолжить 💖</button>
+            </div>
+        </div>
+
+        <div class="step" id="finalStep">
+            <div class="content glass final">
+                <div class="hearts" id="hearts"></div>
+                <h1 class="main-title">Я очень рад, что ты пойдёшь со мной на свидание, Кристина 💖</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
